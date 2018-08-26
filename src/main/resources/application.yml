@@ -1,0 +1,9 @@
+server: 
+  port: 9000
+#  tomcat: 
+#    max-threads: 1
+  
+  
+spring:
+  profiles:
+    active: local

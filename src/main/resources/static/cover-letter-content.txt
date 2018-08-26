@@ -1,0 +1,21 @@
+Hey!
+
+My name is Michael and I like to code!
+
+In a nutshell, I make RESTful api’s using Spring, Single Page Applications using React, Mobile Apps using React Native and MongoDB and perform DevOps using Docker and Amazon Web Services.
+
+Believe it or not, I only have 4 years of development experience.  Most of my knowledge is self taught, because by day, I work as a contractor developing Microservices in Spring Boot and UIs in Angular 5.  But by night, I moonlight as an aspiring mobile app developer, which is what has driven my learning in AWS, React and React Native.
+
+Now, a brief description of my work background.
+
+My first job, I was working as a consultant for a Financial Firm in Delaware.  I was part of a team of three people to convert about 30 financial reports used by the Department of Treasury from WebFocus to Jasper.  Of those 30 some reports, I did 23.  Now it is worth mentioning that these reports have been used for over a decade in production.  Of the 23 reports I converted, 5 had pre-existing production level defects.  Meaning the WebFocus versions had production defects that I discovered, confirmed and corrected with my Jasper version.
+
+After that, my company re-assigned me to a new contract with the same Financial Firm, but it was in Long Island City;  here I was first introduced to Spring Boot Microservices.  Unfortunately, due to issues with my consulting company at the time, I was only able to stay at this position for 4 months.  But during that time, I worked on developing the backend api for the Firm’s Debit Card Quick Lock feature on the Firm’s Mobile App.
+
+Which brings me to my current position, which is a contractor at a different Financial Firm in Jersey City.  I feel I have accomplished a lot at my current position.  I work on a team that supports applications for global markets and trading; most of which are legacy, monolythic applications that we have slowly been converting to microservices.  My most significant accomplishment I would have to say is discovering a CSRF, Authorization vulnerability in our microservices architecture and creating the solution ...let me explain.  Of the 100+ apps my department supports, we’ve converted about 40 of them from monolithic applications to microservices in addition to creating about 12-14 new applications, also based with microservices.  All of which sit behind a Netflix Zuul Proxy gateway and Ribbon load balancer...which I was able to (ethically) hack into using a simple html file with inline javascript to perform a CSRF attack.  After presenting my findings I offered a solution...which was securing our Zuul Proxy with OAuth2.  This lead to me creating an example I uploaded to my Github, which became the “seed” for what we actually implemented at the Firm I work for.
+
+Coding, without a doubt, is my favorite thing to do in my free time.  You hear the expression, “do what you love and you will never work a day in your life”...that describes me perfectly.  I am so early into my career, but I feel I have just started to master developing applications with Java and Spring on the backend and React on the frontend.  I have plans to learn so much more...Scala, Python, AI programming...the sky's the limit.
+
+Thanks for your time!  Hopefully, we can get together and discuss some of cool things we can do with technology!
+
+-Mike
