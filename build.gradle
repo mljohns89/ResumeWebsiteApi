@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '2.0.3.RELEASE'
+		gradleDockerVersion = '0.20.1'
 	}
 	repositories {
 		mavenCentral()
@@ -10,10 +11,13 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath('gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.20.1')
+		classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:${gradleDockerVersion}")
 	}
 }
 
+plugins {
+	id "io.spring.dependency-management" version "1.0.5.RELEASE"
+}
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -47,13 +51,27 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven {
+		url 'https://repo.spring.io/libs-milestone'
+	}
+	maven {
+		url 'https://repo.spring.io/libs-snapshot'
+	}
 }
 
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.BUILD-SNAPSHOT"
+	}
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile("org.springframework.boot:spring-boot-starter-actuator")
+	
+	compile('org.springframework.cloud:spring-cloud-config-server')
 	
 	compile("com.google.guava:guava:26.0-jre")
 		
@@ -62,6 +80,13 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile("org.springframework.security:spring-security-test")
 	testCompile("junit:junit")
+}
+
+eclipse {
+	classpath {
+		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+	}
 }
 
 

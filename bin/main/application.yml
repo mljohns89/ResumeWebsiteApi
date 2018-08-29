@@ -6,4 +6,27 @@ server:
   
 spring:
   profiles:
-    active: local
+    active: local, native
+#  cloud: 
+#    config:
+#      server: 
+#        git: 
+#          uri: https://github.com/mjohns39/config-repo
+
+
+#encrypt:
+#  keyStore: 
+#    password: mypass
+#    alias: mytest
+#    location: classpath:auth/mytest.jks
+#  rsa:
+#    algorithm: DEFAULT
+#    salt: deadbeef
+#    strong: false
+    
+#    secret: mypass #defaults to be same as password
+
+
+michaeljohnson: 
+  keystore: 
+    pass: mypass

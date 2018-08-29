@@ -1,0 +1,5 @@
+encrypt:
+  keyStore: 
+    location: classpath:auth/mytest.jks
+    password: mypass
+    alias: mytest
