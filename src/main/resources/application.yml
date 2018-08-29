@@ -14,11 +14,11 @@ spring:
 #          uri: https://github.com/mjohns39/config-repo
 
 
-#encrypt:
-#  keyStore: 
-#    password: mypass
-#    alias: mytest
-#    location: classpath:auth/mytest.jks
+encrypt:
+  keyStore: 
+    password: mypass
+    alias: mytest
+    location: classpath:auth/mytest.jks
 #  rsa:
 #    algorithm: DEFAULT
 #    salt: deadbeef
